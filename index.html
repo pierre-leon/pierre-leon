@@ -28,7 +28,7 @@ body { margin: 0; padding: 0; }
     var map = new mapboxgl.Map({
         container: 'map',
         style: 'mapbox://styles/mapbox/streets-v11',
-        center: [100.48421334007492,13.786342016475572],
+        center: [100.48421334007492, 13.786342016475572],
         zoom: 13
     });
 
@@ -37,15 +37,13 @@ body { margin: 0; padding: 0; }
         new MapboxGeocoder({
             accessToken: mapboxgl.accessToken,
 
-            // Limit seach results to Australia.
+            // Limit seach results
             countries: 'th',
 
             // Use a bounding box to further limit results
-            // to the geographic bounds representing the
-            // region of New South Wales.
             bbox: [99.85553883406249, 13.41625888188247, 101.23244540275851, 14.448983930701175],
-            types:[poi, address, neighborhood, place, locality, postcode],
-	    language= [th, en]
+            //types:[poi, address, neighborhood, place, locality, postcode],
+	    //language= [th, en]
             },
 			   
             mapboxgl: mapboxgl
