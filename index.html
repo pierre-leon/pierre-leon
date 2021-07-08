@@ -42,8 +42,9 @@ body { margin: 0; padding: 0; }
 
             // Use a bounding box to further limit results
             bbox: [99.85553883406249, 13.41625888188247, 101.23244540275851, 14.448983930701175],
-           // types:['poi', 'address', 'neighborhood', 'place', 'locality', 'postcode'],
-	     language= ['th', 'en'],
+            types:'poi, address, neighborhood, place, locality, postcode',
+	    language: 'th, en',
+	    limit: 10,
 			   
             mapboxgl: mapboxgl
         })
@@ -52,7 +53,3 @@ body { margin: 0; padding: 0; }
 
 </body>
 </html>
-<!--
-&autocomplete=true
-
-&limit=10 -->
