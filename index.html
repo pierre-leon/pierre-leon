@@ -32,13 +32,13 @@ body { margin: 0; padding: 0; }
         zoom: 13
     });
 
-    mapboxgl.setRTLTextPlugin('https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-rtl-text/v0.2.3/mapbox-gl-rtl-text.js');
-    map.addControl(new MapboxLanguage({
-      defaultLanguage: 'mul'
-    }),
+    //mapboxgl.setRTLTextPlugin('https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-rtl-text/v0.2.3/mapbox-gl-rtl-text.js');
+    //map.addControl(new MapboxLanguage({
+    //  defaultLanguage: 'mul'
+    //}),
 
     // Add the control to the map.
-    //map.addControl(
+    map.addControl(
         new MapboxGeocoder({
             accessToken: mapboxgl.accessToken,
 
