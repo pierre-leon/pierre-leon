@@ -33,12 +33,12 @@
       url= new URL('http://localhost:7979/journeys')
 		  if (start) url.searchParams.set( 'start', start );
 		  if (end) url.searchParams.set( 'end', end);
-		  rand ? url.searchParams.set( 'env', rand ? ENV[0], ENV[1];)
+		  rand ? url.searchParams.set( 'env', rand ? ENV[0] : ENV[1];)
 		  ;
 		  if (time) url.searchParams.set( 'time', time)
       
       document.getElementById("left").src = url;
-      url.searchParams.set( 'env', rand ? ENV[1], ENV[0];)
+      url.searchParams.set( 'env', rand ? ENV[1] : ENV[0];)
       document.getElementById("right").src = url;
       
       
