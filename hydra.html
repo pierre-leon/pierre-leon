@@ -17,21 +17,28 @@
         frameborder="0" height=1200 scrolling="no" align="right" ></iframe>
 	  
 	  <script>
+      // get parameters from URL
       const params = new URLSearchParams(document.location.search);
       const start = params.get("start");
       const end = params.get("end");
       const time = params.get("time");
       console.log("start %s, end %s, time %s", start, end, time); 
       "?start=";
-      
+		  
+	//random env side TODO: get it from URL?
+      	const rand = Math.random() < 0.5
+	const ENV = ['khonsu-keystops-cdmx', 'khonsu-test-cdmx'];
+		  
+	//apply parametrs to iframe URL
       url= new URL('http://localhost:7979/journeys')
 		  if (start) url.searchParams.set( 'start', start );
 		  if (end) url.searchParams.set( 'end', end);
-		  url.searchParams.set( 'env', 'khonsu-keystops-cdmx');
+		  rand ? url.searchParams.set( 'env', rand ? ENV[0], ENV[1];)
+		  ;
 		  if (time) url.searchParams.set( 'time', time)
       
       document.getElementById("left").src = url;
-      url.searchParams.set( 'env', 'khonsu-test-cdmx')
+      url.searchParams.set( 'env', rand ? ENV[1], ENV[0];)
       document.getElementById("right").src = url;
       
       
