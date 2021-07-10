@@ -4,7 +4,19 @@
     .box { width: 49%;
     }
      </style>
-    <script>
+    
+  </head>
+  <body>
+
+    <iframe id="left" class="box" 
+        src="http://www.google.com" 
+        frameborder="0" scrolling="no" align="left" height=1200> </iframe>
+   
+    <iframe  id="right" class="box"
+        src="www.apple.com"
+        frameborder="0" height=1200 scrolling="no" align="right" ></iframe>
+	  
+	  <script>
       const params = new URLSearchParams(document.location.search);
       const start = params.get("start");
       const end = params.get("end");
@@ -24,15 +36,5 @@
       
       
     </script>
-  </head>
-  <body>
-
-    <iframe id="left" class="box" 
-        src="http://www.google.com" 
-        frameborder="0" scrolling="no" align="left" height=1200> </iframe>
-   
-    <iframe  id="right" class="box"
-        src="www.apple.com"
-        frameborder="0" height=1200 scrolling="no" align="right" ></iframe>
   </body>
 </html>
