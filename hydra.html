@@ -9,11 +9,11 @@
   <body>
 
     <iframe id="left" class="box" 
-        src="http://www.google.com" 
+        src="" 
         frameborder="0" scrolling="no" align="left" height=1200> </iframe>
    
     <iframe  id="right" class="box"
-        src="www.apple.com"
+        src=""
         frameborder="0" height=1200 scrolling="no" align="right" ></iframe>
 	  
 	  <script>
@@ -25,10 +25,10 @@
       "?start=";
       
       url= new URL('http://localhost:7979/journeys')
-	    url.searchParams.set( 'start', start )
-	    url.searchParams.set( 'end', end)
-      url.searchParams.set( 'env', 'khonsu-keystops-cdmx')
-      url.searchParams.set( 'time', time)
+		  if (start) url.searchParams.set( 'start', start );
+		  if (end) url.searchParams.set( 'end', end);
+		  url.searchParams.set( 'env', 'khonsu-keystops-cdmx');
+		  if (time) url.searchParams.set( 'time', time)
       
       document.getElementById("left").src = url;
       url.searchParams.set( 'env', 'khonsu-test-cdmx')
