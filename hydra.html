@@ -4,15 +4,23 @@
     .box { width: 49%;
     }
      </style>
+    <script>
+      const params = new URLSearchParams(document.location.search);
+      const start = params.get("start");
+      const end = params.get("end");
+      const time = params.get("time");
+      console.log("start %s, end %s, time %s", start, end, time); 
+      
+    </script>
   </head>
   <body>
 
     <iframe class="box" 
         src="http://localhost:7979/journeys?start=19.400504117559468,-99.14315700531007&end=19.419487470394376,-99.14405822753906&env=khonsu-keystops-cdmx&time=2021-07-10T15:44:36.504Z" 
-        frameborder="0" scrolling="no" align="left" height=800> </iframe>
+        frameborder="0" scrolling="no" align="left" height=1200> </iframe>
    
     <iframe  class="box"
         src="http://localhost:7979/journeys?start=19.400504117559468,-99.14315700531007&end=19.419487470394376,-99.14405822753906&env=khonsu-test-cdmx&time=2021-07-10T15:44:36.504Z"
-        frameborder="0" height=800 scrolling="no" align="right" ></iframe>
+        frameborder="0" height=1200 scrolling="no" align="right" ></iframe>
   </body>
 </html>
