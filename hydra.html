@@ -1,19 +1,18 @@
 <html>
   <head>
-    <sytle>
-    .box { display:inline-block; }
-      </style>
-
+    <style>
+    .box { width: 49%;
+    }
+     </style>
   </head>
   <body>
 
-<div class="box">
-  <iframe src="http://localhost:7979/journeys?start=19.400504117559468,-99.14315700531007&end=19.419487470394376,-99.14405822753906&env=khonsu-keystops-cdmx&time=2021-07-10T15:44:36.504Z" frameborder="0" scrolling="no" height="1000" align="left"> </iframe>
-</div>
-
-<div class="box">
-  <iframe src="http://localhost:7979/journeys?start=19.400504117559468,-99.14315700531007&end=19.419487470394376,-99.14405822753906&env=khonsu-test-cdmx&time=2021-07-10T15:44:36.504Z" frameborder="0" scrolling="no" height="1000"></iframe>
-</div>
-
+    <iframe class="box" 
+        src="http://localhost:7979/journeys?start=19.400504117559468,-99.14315700531007&end=19.419487470394376,-99.14405822753906&env=khonsu-keystops-cdmx&time=2021-07-10T15:44:36.504Z" 
+        frameborder="0" scrolling="no" align="left" height=800> </iframe>
+   
+    <iframe  class="box"
+        src="http://localhost:7979/journeys?start=19.400504117559468,-99.14315700531007&end=19.419487470394376,-99.14405822753906&env=khonsu-test-cdmx&time=2021-07-10T15:44:36.504Z"
+        frameborder="0" height=800 scrolling="no" align="right" ></iframe>
   </body>
 </html>
