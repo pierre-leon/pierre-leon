@@ -1,8 +1,8 @@
 ### Hi there 👋
 
-### [Search Bangkok](bangkok.html)
+### [Search Bangkok](https://pierre-leon.github.io/bangkok.html)
 
-### [Test JP](hydra.html)
+### [Test JP](https://pierre-leon.github.io/hydra.html)
 
 
 <!--
