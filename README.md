@@ -1,5 +1,10 @@
 ### Hi there 👋
 
+# (Search Bangkok) [bangkok.html]
+
+# (Test JP) [hydra.html]
+
+
 <!--
 **pierre-leon/pierre-leon** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
 
