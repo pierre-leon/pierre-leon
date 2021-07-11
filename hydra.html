@@ -23,10 +23,11 @@
       const start = params.get("start");
       const end = params.get("end");
       const time = params.get("time");
-      const leftside = param.get("leftside");
+      //const leftside = param.get("leftside");
       console.log("start %s, end %s, time %s", start, end, time); 
 		  
-	const rand = leftside === undefined ? Math.random() < 0.5 : leftside;  
+	//const rand = leftside === undefined ? Math.random() < 0.5 : leftside; 
+	const rand = Math.random() < 0.5;
 	const ENV = ['khonsu-keystops-cdmx', 'khonsu-test-cdmx'];
 		  
 	//apply parametrs to iframe URL
