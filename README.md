@@ -1,8 +1,8 @@
 ### Hi there 👋
 
-### [Search Bangkok] (bangkok.html)
+### [Search Bangkok](bangkok.html)
 
-#### [Test JP] (hydra.html)
+#### [Test JP](hydra.html)
 
 
 <!--
