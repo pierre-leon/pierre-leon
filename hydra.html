@@ -1,5 +1,6 @@
 <html>
   <head>
+	  <link rel="icon" type="image/x-icon" href="https://hydra.whereismytransport.com/favicon.ico"/>
     <style>
     .box { width: 49%;
     }
@@ -22,15 +23,14 @@
       const start = params.get("start");
       const end = params.get("end");
       const time = params.get("time");
+      const left = param.get("left");
       console.log("start %s, end %s, time %s", start, end, time); 
-      "?start=";
 		  
-	//random env side TODO: get it from URL?
-      	const rand = Math.random() < 0.5
+	const rand = left === undefined ? Math.random() < 0.5 : left  
 	const ENV = ['khonsu-keystops-cdmx', 'khonsu-test-cdmx'];
 		  
 	//apply parametrs to iframe URL
-      url= new URL('http://localhost:7979/journeys')
+      url= new URL('https://hydra.whereismytransport.com/journeys')
 		  if (start) url.searchParams.set( 'start', start );
 		  if (end) url.searchParams.set( 'end', end);
 		  url.searchParams.set( 'env', rand ? ENV[0] : ENV[1]);
