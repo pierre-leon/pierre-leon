@@ -23,23 +23,21 @@
       const start = params.get("start");
       const end = params.get("end");
       const time = params.get("time");
-      //const leftside = param.get("leftside");
-      console.log("start %s, end %s, time %s", start, end, time); 
-		  
-	//const rand = leftside === undefined ? Math.random() < 0.5 : leftside; 
-	const rand = Math.random() < 0.5;
-	const ENV = ['khonsu-param-cdmx', 'khonsu-test-cdmx'];
+      const left = param.get("left");
+      console.log("start %s, end %s, time %s, left %s", start, end, time); 
+      const side = (left==undefined) ? left : 1;
+      const ENV = ['khonsu-param-cdmx', 'khonsu-test-cdmx'];
 		  
 	//apply parametrs to iframe URL
       url= new URL('https://hydra.whereismytransport.com/journeys')
 		  if (start) url.searchParams.set( 'start', start );
 		  if (end) url.searchParams.set( 'end', end);
-		  url.searchParams.set( 'env', rand ? ENV[0] : ENV[1]);
+		  url.searchParams.set( 'env', side ? ENV[0] : ENV[1]);
 		  ;
 		  if (time) url.searchParams.set( 'time', time);
       
       document.getElementById("left").src = url;
-      url.searchParams.set( 'env', rand ? ENV[1] : ENV[0]);
+      url.searchParams.set( 'env', side ? ENV[1] : ENV[0]);
       document.getElementById("right").src = url;
       
       
