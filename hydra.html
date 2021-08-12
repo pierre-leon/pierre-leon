@@ -23,13 +23,13 @@
       const start = params.get("start");
       const end = params.get("end");
       const time = params.get("time");
-      const left = param.get("left");
+      const left = params.get("left");
       console.log("start %s, end %s, time %s, left %s", start, end, time); 
       const side = (left==undefined) ? left : 1;
       const ENV = ['khonsu-param-cdmx', 'khonsu-test-cdmx'];
 		  
 	//apply parametrs to iframe URL
-      url= new URL('https://hydra.whereismytransport.com/journeys')
+      url = new URL('https://hydra.whereismytransport.com/journeys')
 		  if (start) url.searchParams.set( 'start', start );
 		  if (end) url.searchParams.set( 'end', end);
 		  url.searchParams.set( 'env', side ? ENV[0] : ENV[1]);
