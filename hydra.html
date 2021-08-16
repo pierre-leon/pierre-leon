@@ -24,9 +24,12 @@
       const end = params.get("end");
       const time = params.get("time");
       const left = params.get("left");
-      console.log("start %s, end %s, time %s, left %s", start, end, time, left); 
-      const side = (left==undefined) ? left : 1;
-      const ENV = ['khonsu-param-cdmx', 'khonsu-test-cdmx'];
+      const side = (left==null) ? 1 : left;
+      let env = params.get("env");
+      console.log("start %s, end %s, time %s, left %s env %s", start, end, time, left, env); 
+      env =  (env==null) ? khonsu-param-cdmx : env; 
+
+      const ENV = [env, 'khonsu-test-cdmx'];
 		  
 	//apply parametrs to iframe URL
       url = new URL('https://hydra.whereismytransport.com/journeys')
