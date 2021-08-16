@@ -23,9 +23,9 @@
       const start = params.get("start");
       const end = params.get("end");
       const time = params.get("time");
-      const side = params.has("left") ? params.get("left") : 1;
+      const side = params.has("side") ? params.get("side") : 1;
       const env = params.has("env") ? params.get("env") : "khonsu-param-cdmx";
-      console.log("start %s, end %s, time %s, left %s env %s", start, end, time, side, env); 
+      console.log("start %s, end== %s, time %s, side: %s env-- %s", start, end, time, side, env); 
 	if(side) console.log("yes");
 
       const ENV = [env, 'khonsu-test-cdmx'];
