@@ -26,7 +26,6 @@
       const side = params.has("side") ? params.get("side") : 1;
       const env = params.has("env") ? params.get("env") : "khonsu-param-cdmx";
       console.log("start %s, end== %s, time %s, side: %s env-- %s", start, end, time, side, env); 
-	if(side) console.log("yes");
 
       const ENV = [env, 'khonsu-test-cdmx'];
 		  
@@ -34,12 +33,12 @@
       url = new URL('https://hydra.whereismytransport.com/journeys')
 		  if (start) url.searchParams.set( 'start', start );
 		  if (end) url.searchParams.set( 'end', end);
-		  url.searchParams.set( 'env', side ? ENV[0] : ENV[1]);
+		  url.searchParams.set( 'env', side > 0 ? ENV[0] : ENV[1]);
 		  ;
 		  if (time) url.searchParams.set( 'time', time);
       
       document.getElementById("left").src = url;
-      url.searchParams.set( 'env', side ? ENV[1] : ENV[0]);
+      url.searchParams.set( 'env', side > 0 ? ENV[1] : ENV[0]);
       document.getElementById("right").src = url;
       
       
